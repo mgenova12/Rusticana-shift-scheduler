@@ -15,6 +15,5 @@ module Types
       Employee.all
     end
 
-
   end
 end
