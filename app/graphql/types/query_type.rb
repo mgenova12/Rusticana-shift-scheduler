@@ -6,13 +6,13 @@ module Types
     field :roles, [Types::RoleType], null: false
 
     def roles
-      Role.all
+      Role.order(:title)
     end   
 
     field :employees, [Types::EmployeeType], null: false
 
     def employees
-      Employee.all
+      Employee.all.reverse
     end
 
   end
