@@ -7,6 +7,7 @@ module Types
     field :delete_employee_role, mutation: Mutations::DeleteEmployeeRole
     field :reset_roles, mutation: Mutations::ResetRoles
     field :delete_employee, mutation: Mutations::DeleteEmployee
+    field :edit_employee_name, mutation: Mutations::EditEmployeeName
 
   end
 end
