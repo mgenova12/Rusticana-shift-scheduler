@@ -12,7 +12,7 @@ module Types
     field :employees, [Types::EmployeeType], null: false
 
     def employees
-      Employee.all.reverse
+      Employee.all.order(:created_at).reverse
     end
 
   end
