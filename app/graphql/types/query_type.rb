@@ -16,12 +16,13 @@ module Types
     end
     
 
-    field :schedules, [Types::ScheduleType], null: false
+    field :schedules, [Types::ScheduleType], null: false do 
+      argument :schedule_type, String, required: true
+    end
 
-    def schedules
-      Schedule.all
+    def schedules(schedule_type:)
+      Schedule.where(schedule_type: schedule_type)
     end
     
-
   end
 end
