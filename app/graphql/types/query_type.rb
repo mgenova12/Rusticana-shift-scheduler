@@ -14,6 +14,14 @@ module Types
     def employees
       Employee.all.order(:created_at).reverse
     end
+    
+
+    field :schedules, [Types::ScheduleType], null: false
+
+    def schedules
+      Schedule.all
+    end
+    
 
   end
 end
