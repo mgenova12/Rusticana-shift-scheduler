@@ -6,16 +6,16 @@ Rails.application.routes.draw do
 
   post "/graphql", to: "graphql#execute"
 
-  namespace :api do
-      namespace :v1 do
-        get '/employees' => 'employees#index'
-        post '/employees' => 'employees#create'
+  # namespace :api do
+  #     namespace :v1 do
+  #       get '/employees' => 'employees#index'
+  #       post '/employees' => 'employees#create'
 
-        get '/roles' => 'roles#index'
+  #       get '/roles' => 'roles#index'
 
-        get '/employee_roles' => 'employee_roles#index'
-        post '/employee_roles' => 'employee_roles#create'
-      end
-  end
+  #       get '/employee_roles' => 'employee_roles#index'
+  #       post '/employee_roles' => 'employee_roles#create'
+  #     end
+  # end
 
 end

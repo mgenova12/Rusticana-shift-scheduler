@@ -15,7 +15,6 @@ module Types
       Employee.all.order(:created_at).reverse
     end
     
-
     field :schedules, [Types::ScheduleType], null: false do 
       argument :schedule_type, String, required: true
     end
@@ -23,6 +22,14 @@ module Types
     def schedules(schedule_type:)
       Schedule.where(schedule_type: schedule_type)
     end
+
+    field :role_employees, [Types::EmployeeType], null: false do 
+      argument :title, String, required: true
+    end
     
+    def role_employees(title:)
+      Role.find_by(title: title).employees
+    end
+
   end
 end
