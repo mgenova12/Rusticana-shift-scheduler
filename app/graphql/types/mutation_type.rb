@@ -10,6 +10,6 @@ module Types
     field :edit_employee_name, mutation: Mutations::EditEmployeeName
     field :create_schedule, mutation: Mutations::CreateSchedule
     field :delete_shift, mutation: Mutations::DeleteShift
-    
+    field :update_employee_schedule, mutation: Mutations::UpdateEmployeeSchedule
   end
 end
