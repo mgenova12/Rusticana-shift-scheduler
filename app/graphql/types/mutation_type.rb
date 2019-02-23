@@ -13,6 +13,7 @@ module Types
     field :update_employee_schedule, mutation: Mutations::UpdateEmployeeSchedule
     field :create_shift_time, mutation: Mutations::CreateShiftTime
     field :delete_shift_time, mutation: Mutations::DeleteShiftTime
+    field :update_shift_time_schedule, mutation: Mutations::UpdateShiftTimeSchedule
 
   end
 end
