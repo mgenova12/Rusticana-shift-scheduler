@@ -31,5 +31,12 @@ module Types
       Role.find_by(title: title).employees
     end
 
+    field :shift_times, [Types::ShiftTimeType], null: false
+
+    def shift_times 
+      ShiftTime.all.reverse
+    end
+
+
   end
 end
