@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190223163236) do
+ActiveRecord::Schema.define(version: 20190224170503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,20 +35,28 @@ ActiveRecord::Schema.define(version: 20190223163236) do
     t.boolean  "checked"
   end
 
+  create_table "saved_schedules", force: :cascade do |t|
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "schedules", force: :cascade do |t|
     t.string   "day"
     t.integer  "employee_id"
     t.integer  "shift_time_id"
     t.string   "time_of_day"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "schedule_type"
+    t.integer  "saved_schedule_id"
   end
 
   create_table "shift_times", force: :cascade do |t|
-    t.string   "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "end_time"
+    t.datetime "start_time"
   end
 
 end

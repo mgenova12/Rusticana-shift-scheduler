@@ -1,11 +1,12 @@
 class Mutations::CreateShiftTime < Mutations::BaseMutation
-  argument :time, String, required: true
+  argument :start_time, String, required: true
+  argument :end_time, String, required: true
 
   field :shift_time, Types::ShiftTimeType, null: false
   field :errors, [String], null: false
 
-  def resolve(time:)
-    shift_time = ShiftTime.new(time: time)
+  def resolve(start_time:, end_time:)
+    shift_time = ShiftTime.new(start_time: start_time, end_time: end_time)
     
     if shift_time.save
       # Successful creation, return the created object with no errors

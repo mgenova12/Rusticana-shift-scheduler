@@ -1,0 +1,2 @@
+class SavedSchedule < ApplicationRecord
+end
