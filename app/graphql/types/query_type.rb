@@ -20,7 +20,7 @@ module Types
     end
 
     def schedules(schedule_type:)
-      Schedule.where(schedule_type: schedule_type)
+      Schedule.where(schedule_type: schedule_type, saved_schedule_id: nil)
     end
 
     field :role_employees, [Types::EmployeeType], null: false do 
