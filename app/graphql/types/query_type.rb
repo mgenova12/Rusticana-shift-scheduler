@@ -37,6 +37,11 @@ module Types
       ShiftTime.all.reverse
     end
 
+    field :saved_schedules, [Types::SavedScheduleType], null: false
+
+    def saved_schedules
+      SavedSchedule.all.reverse
+    end
 
   end
 end
