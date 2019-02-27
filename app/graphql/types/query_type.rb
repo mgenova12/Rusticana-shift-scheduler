@@ -16,19 +16,19 @@ module Types
     end
     
     field :schedules, [Types::ScheduleType], null: false do 
-      argument :schedule_type, String, required: true
+      argument :role_id, ID, required: true
     end
 
-    def schedules(schedule_type:)
-      Schedule.where(schedule_type: schedule_type, saved_schedule_id: nil)
+    def schedules(role_id:)
+      Schedule.where(role_id: role_id, saved_schedule_id: nil)
     end
 
     field :role_employees, [Types::EmployeeType], null: false do 
-      argument :title, String, required: true
+      argument :id, ID, required: true
     end
     
-    def role_employees(title:)
-      Role.find_by(title: title).employees
+    def role_employees(id:)
+      Role.find_by(id: id).employees
     end
 
     field :shift_times, [Types::ShiftTimeType], null: false
