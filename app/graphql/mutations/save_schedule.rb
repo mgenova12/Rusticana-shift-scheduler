@@ -18,6 +18,7 @@ class Mutations::SaveSchedule < Mutations::BaseMutation
           employee_id: shift.employee_id,
           schedule_type: shift.schedule_type,
           saved_schedule_id: saved_schedule.id,
+          role_id: shift.role_id
         )
       end
     
