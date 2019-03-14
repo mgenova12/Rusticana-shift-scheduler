@@ -3,6 +3,7 @@ module Types
     field :id, ID, null: false
     field :day, String, null: true
     field :time_of_day, String, null: true
+    field :saved_schedule_id, ID, null: true
 
     field :employee_id, ID, null: true
     field :shift_time_id, ID, null: true

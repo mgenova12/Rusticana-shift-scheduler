@@ -46,13 +46,14 @@ module Types
 
     field :final_schedule, [Types::FinalScheduleType], null: false do 
       argument :saved_schedule_id, ID, required: true
-      argument :role_id, ID, required: true
+      argument :employee_id, ID, required: true
       argument :day, String, required: true
       argument :time_of_day, String, required: true
+      argument :role_id, ID, required: true
     end    
 
-    def final_schedule(saved_schedule_id:, day:, time_of_day:, role_id:)
-      Schedule.where(saved_schedule_id: saved_schedule_id, day: day, time_of_day: time_of_day, role_id: role_id)
+    def final_schedule(saved_schedule_id:, employee_id:, day:, time_of_day:, role_id:)
+      Schedule.where(saved_schedule_id: saved_schedule_id, employee_id: employee_id, day: day, time_of_day: time_of_day, role_id: role_id)
     end
       
 
