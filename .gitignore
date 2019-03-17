@@ -16,6 +16,3 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-[submodule "Rusticana-shift-scheduler/client"] 
-  path = Rusticana-shift-scheduler/client 
-  url = git@github.com:mgenova12/client.git
