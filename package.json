@@ -1,13 +1,12 @@
+
 {
   "name": "rusticana-shift-scheduler",
-  "license": "MIT",
   "engines": {
-    "node": "8.9.4",
-    "yarn": "0.27.5"
+    "node": "8.9.4"
   },
   "scripts": {
-    "build": "cd client && yarn add && yarn --cwd client build",
+    "build": "cd client && npm install && npm run build && cd ..",
     "deploy": "cp -a client/build/. public/",
-    "heroku-postbuild": "yarn build && yarn deploy"
+    "heroku-postbuild": "npm run build && npm run deploy && echo 'Client built!'"
   }
 }
