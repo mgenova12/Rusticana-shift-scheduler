@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "yarn add --cwd client install && yarn add --cwd client build",
-    "deploy": "cd .. && pwd && cp -a client/build/. public/",
+    "deploy": "cd ../.. && pwd && cp -a client/build/. public/",
     "heroku-postbuild": "yarn build && yarn deploy"
   }
 }
