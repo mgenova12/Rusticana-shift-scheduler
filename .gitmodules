@@ -1,3 +1,4 @@
-[submodule "Rusticana-shift-scheduler/client"] 
-  path = Rusticana-shift-scheduler/client 
-  url = https://github.com/mgenova12/client
+[submodule "client"]
+	path = client
+	url = https://github.com/mgenova12/client
+	branch = master
