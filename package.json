@@ -8,6 +8,6 @@
   "scripts": {
     "build": "cd client && npm install && npm run build && cd ..",
     "deploy": "cp -a client/build/. public/",
-    "heroku-postbuild": "yarn build && yarn deploy"
+    "heroku-postbuild": "yarn build && yarn add --dev gh-pages && yarn deploy"
   }
 }
