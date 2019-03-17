@@ -6,7 +6,7 @@
     "yarn": "0.27.5"
   },
   "scripts": {
-    "build": "yarn --cwd client add && yarn --cwd client build",
+    "build": "cd client && yarn add && yarn --cwd client build",
     "deploy": "cp -a client/build/. public/",
     "heroku-postbuild": "yarn build && yarn deploy"
   }
